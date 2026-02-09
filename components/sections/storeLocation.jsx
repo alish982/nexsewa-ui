@@ -70,7 +70,7 @@ export const StoreLocation = () => {
             500 + Items sold
           </button>
 
-          <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors">
+          <button className="w-full bg-custom hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors">
             Get Directions →
           </button>
         </div>

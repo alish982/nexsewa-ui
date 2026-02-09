@@ -7,7 +7,7 @@ export const Badge = ({
   className = ''
 }) => {
   const variants = {
-    sale: 'bg-green-600 text-white',
+    sale: 'bg-custom text-white',
     new: 'bg-orange-600 text-white'
   };
   

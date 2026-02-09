@@ -42,10 +42,10 @@ export const ProductCard = ({ product, onAddToCart }) => {
       </div>
 
       <div className="p-4">
-        <h3 className="font-semibold text-gray-800 mb-1 line-clamp-1">
+        <h3 className="font-quicksand font-[600] text-gray-800 mb-2 line-clamp-1">
           {product.name}
         </h3>
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-2">
           <span className="text-sm text-gray-400 line-through">
             ${product.originalPrice.toFixed(2)}
           </span>
@@ -56,7 +56,7 @@ export const ProductCard = ({ product, onAddToCart }) => {
         </div>
 
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-sm text-gray-400">
+          <span className="text-sm font-quicksand text-[#9CA3AF]">
             Delivery: ${product.delivery.toFixed(2)}
           </span>
         </div>
@@ -80,7 +80,7 @@ export const ProductCard = ({ product, onAddToCart }) => {
             onClick={() => onAddToCart && onAddToCart(product, quantity)}
             className="w-full sm:w-10 h-10 flex items-center justify-center 
                rounded-lg sm:rounded-full
-               bg-primary-600 hover:bg-primary-700 
+               bg-custom hover:bg-primary-700 
                transition-colors"
           >
             <ShoppingCart className="w-5 h-5 text-white" />

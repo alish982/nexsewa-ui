@@ -8,8 +8,6 @@ import {
   Heart,
   Menu,
   X,
-  MapPin,
-  Phone,
 } from "lucide-react";
 import { SearchBar } from "../commons/SearchBar";
 import Image from "next/image";
@@ -28,15 +26,7 @@ export const Header = () => {
             <SearchBar placeholder="Search for product" />
           </div>
 
-          <div className="flex items-center gap-3">
-            <button className="hidden md:flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
-              <Heart className="w-6 h-6 text-gray-600" />
-            </button>
-
-            <button className="hidden md:flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
-              <User className="w-6 h-6 text-gray-600" />
-            </button>
-
+          <div className="flex items-center gap-2">
             <button className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors">
               <ShoppingCart className="w-6 h-6 text-gray-600" />
               {cartCount > 0 && (
@@ -44,6 +34,13 @@ export const Header = () => {
                   {cartCount}
                 </span>
               )}
+            </button>
+            <button className="hidden md:flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <Heart className="w-6 h-6 text-gray-600" />
+            </button>
+
+            <button className="hidden md:flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <User className="w-6 h-6 text-gray-600" />
             </button>
 
             <button
@@ -69,10 +66,17 @@ export const Header = () => {
           <div className="hidden md:flex items-center gap-8 py-3">
             <Link
               href="/"
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+              className="flex items-center gap-2 text-gray-700 hover:text-primary-600 font-medium transition-colors"
             >
-              All Categories
+              <span>All Categories</span>
+              <Image
+                src="/others/downarrow.svg"
+                height={13}
+                width={10}
+                alt="arrow"
+              />
             </Link>
+
             <Link
               href="/shop"
               className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
@@ -104,7 +108,7 @@ export const Header = () => {
               Offers
             </Link>
           </div>
-          <div className="hidden md:flex items-center gap-2 py-3">
+          <div className="hidden md:flex gap-2 py-3">
             <Link
               href="/mail"
               className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
@@ -114,10 +118,10 @@ export const Header = () => {
             </Link>
             <Link
               href="/mail"
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+              className="flex items-center gap-1 text-gray-700 hover:text-primary-600 font-medium transition-colors"
             >
-              {" "}
-              placeholder@gmail.com
+              <Image src="/others/mail.svg" height={20} width={20} alt="mail" />
+              <span>placeholder@gmail.com</span>
             </Link>
           </div>
         </div>
@@ -162,6 +166,15 @@ export const Header = () => {
             >
               Offers
             </Link>
+            <button className="flex items-center gap-1">
+              <Heart className="w-6 h-6 text-gray-600" />
+              <span>Fav</span>
+            </button>
+
+            <button className="flex items-center gap-1">
+              <User className="w-6 h-6 text-gray-600" />
+              <span>User</span>
+            </button>
           </nav>
         </div>
       )}
@@ -176,14 +189,24 @@ export const Header = () => {
         🎉 Latest Deals and Exciting Offers at ThinkMart – Save Up to 50% on
         Groceries, Fresh Products and More!
       </div>
-
-      <div className="flex items-center h-[53px] justify-center">
+      <div className="flex items-center h-[53px] gap-2 px-4 xl: pl-[85px] 2xl:pl-[340px]">
+        <Image src="/logo/home.svg" width={14} height={14} alt="home" />
         <Image
-          src={"/logo/home.svg"}
-          width={13.33}
-          height={13.62}
-          alt="image"
+          src="/others/downarrow.svg"
+          width={14}
+          height={14}
+          alt="home"
+          className="-rotate-90"
         />
+        <span className="text-sm leading-none">Partner</span>
+        <Image
+          src="/others/downarrow.svg"
+          width={14}
+          height={14}
+          alt="home"
+          className="-rotate-90"
+        />
+        <span className="text-sm leading-none">Rice Spice Dice</span>
       </div>
     </header>
   );

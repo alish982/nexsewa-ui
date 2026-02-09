@@ -20,10 +20,13 @@ module.exports = {
           800: '#166534',
           900: '#14532d',
         },
+        custom: 'var(--color-custom)'
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
+        poppins: ["var(--font-poppins)"],
+        quicksand: ["var(--font-quicksand)"],
       },
     },
   },

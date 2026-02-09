@@ -48,7 +48,7 @@ export default function HomePage() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-display font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl font-quicksand font-[700] text-gray-800 mb-2">
             Popular Categories
           </h2>
         </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-display font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl font-quicksand font-[700] text-gray-800 mb-2">
             Offer Products
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function HomePage() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-display font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl font-quicksand font-[700] text-gray-800 mb-2">
             Feature Products
           </h2>
         </div>
@@ -76,7 +76,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-display font-bold text-gray-800 mb-2">
+            <h2 className="text-3xl font-quicksand font-[700] text-gray-800 mb-2">
               Items sold by Rice Spice and Dice
             </h2>
           </div>

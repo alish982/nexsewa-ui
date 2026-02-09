@@ -14,19 +14,23 @@ export const SearchBar = ({ placeholder, onSearch, show, rounded}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex-1 max-w-2xl">
+    <form
+      onSubmit={handleSubmit}
+      className="relative flex-1 font-poppins max-w-2xl"
+    >
       <Input
         type="text"
-        placeholder={placeholder}
+        placeholder={show? placeholder : 'search for product'}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         icon={show ? <Search className="w-5 h-5" /> : ""}
-        className="pr-24"
+        className="pr-20 md:pr-24 text-sm md:text-base"
+        name="nex"
         fullWidth
       />
       <button
         type="submit"
-        className="absolute right-1 top-1/2 -translate-y-1/2 mr-2 px-2 py-1.5 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors font-medium"
+        className="absolute right-1 top-1/2 -translate-y-1/2 mr-2 px-2 py-1.5 bg-custom text-white rounded-md hover:bg-primary-700 transition-colors font-medium text-sm md:text-base"
       >
         {show ? "Search" : <Search className="w-5 h-5" />}
       </button>
