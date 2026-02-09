@@ -23,7 +23,7 @@ export const Header = () => {
           <Image src={"/logo/logo.svg"} alt="" width={127} height={127} />
 
           <div className="hidden md:block flex-1 max-w-2xl">
-            <SearchBar placeholder="Search for product" rounded="3xl" />
+            <SearchBar placeholder="Search for product" rounded="2xl" />
           </div>
 
           <div className="flex items-center gap-2">
