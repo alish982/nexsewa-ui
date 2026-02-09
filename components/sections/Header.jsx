@@ -23,7 +23,7 @@ export const Header = () => {
           <Image src={"/logo/logo.svg"} alt="" width={127} height={127} />
 
           <div className="hidden md:block flex-1 max-w-2xl">
-            <SearchBar placeholder="Search for product" />
+            <SearchBar placeholder="Search for product" rounded="3xl" />
           </div>
 
           <div className="flex items-center gap-2">
@@ -189,7 +189,7 @@ export const Header = () => {
         🎉 Latest Deals and Exciting Offers at ThinkMart – Save Up to 50% on
         Groceries, Fresh Products and More!
       </div>
-      <div className="flex items-center h-[53px] gap-2 px-4 xl: pl-[85px] 2xl:pl-[340px]">
+      <div className="flex items-center h-[53px] gap-2 px-4 xl:pl-[85px] 2xl:pl-[340px]">
         <Image src="/logo/home.svg" width={14} height={14} alt="home" />
         <Image
           src="/others/downarrow.svg"

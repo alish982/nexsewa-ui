@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
-import { Poppins, Quicksand } from "next/font/google";
+import { Poppins, Quicksand, Inter } from "next/font/google";
 
 export const metadata = {
   title: "Thinkmart - Organic Grocery Store",
@@ -19,9 +19,18 @@ const quicksand = Quicksand({
   variable: "--font-quicksand",
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${quicksand.variable}`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${quicksand.variable} ${inter.variable}`}
+    >
       <body>
         <Header />
         <main className="min-h-screen">{children}</main>

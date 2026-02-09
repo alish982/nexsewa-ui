@@ -90,17 +90,18 @@ export default function HomePage() {
             />
           </aside>
 
-          <div className="">
+          <div className="w-full">
             <div className="hidden md:block space-y-4">
-              <h3>Search Products</h3>
+              <h3 className="font-inter font-[600]">Search Products</h3>
               <SearchBar
                 placeholder="Search for products, brands, or categories..."
                 show={true}
+                rounded={"lg"}
               />
             </div>
 
             <div className="hidden md:block ">
-              <h3 className="py-4">Filters</h3>
+              <h3 className="py-5 font-inter font-[600]">Filters</h3>
               <FilterBar />
             </div>
 

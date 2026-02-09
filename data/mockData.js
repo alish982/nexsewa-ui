@@ -181,7 +181,7 @@ export const categoryFilter = [
   },
   {
     id: '5',
-    name: 'Beverages',
+    name: 'Bevrages',
     items: 25
   },
   {

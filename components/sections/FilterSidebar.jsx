@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { X } from "lucide-react";
 import { categoryFilter, mockRatings } from "@/data/mockData";
+import Image from "next/image";
 
 export const FilterSidebar = ({ isOpen = true, onClose }) => {
   const [priceRange, setPriceRange] = useState([0, 100]);
@@ -16,7 +17,13 @@ export const FilterSidebar = ({ isOpen = true, onClose }) => {
       }`}
     >
       <div className="flex items-center justify-between mb-6">
-        <button className="bg-green-200 rounded px-4 text-gray-800">
+        <button className="bg-custom font-poppins rounded-xl px-4 py-2 text-white shadow-lg flex items-center gap-2">
+          <Image
+            src={"/others/hiddenfilter.svg"}
+            height={14.67}
+            width={14.33}
+            alt="filter"
+          />
           Hide Filter
         </button>
         {onClose && (
@@ -30,8 +37,13 @@ export const FilterSidebar = ({ isOpen = true, onClose }) => {
       </div>
 
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Product Categories</h4>
-        <p className="text-sm">Hover over the categorties for detils</p>
+        <h2 className="text-2xl font-[500] font-poppins text-gray-700 mb-3">
+          Product Categories
+        </h2>
+        <p className="text-sm text-[#808080]">
+          {" "}
+          Hover over the categorties for detils
+        </p>
       </div>
 
       <div className="mb-6">
@@ -43,10 +55,19 @@ export const FilterSidebar = ({ isOpen = true, onClose }) => {
             >
               <input
                 type="radio"
-                name="rating"
+                name="new"
                 checked={selectedRating === val.name}
                 onChange={() => setSelectedRating(val.name)}
-                className="w-4 h-4 text-primary-600 border-gray-300 focus:ring-primary-500"
+                className={`
+                w-4 h-4
+                appearance-none
+                rounded-full
+                ${selectedRating === val.name ? "" : "border-2 border-gray-300"}
+                checked:bg-custom
+                checked:shadow-[inset_0_0_0_3px_white]
+                ring-offset-0.5
+                checked:ring-1 checked:ring-custom
+  `}
               />
               <div className="flex items-center gap-1">
                 <span className="text-sm text-gray-600 ml-1">
@@ -60,7 +81,7 @@ export const FilterSidebar = ({ isOpen = true, onClose }) => {
       </div>
 
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Price</h4>
+        <h4 className="font-semibold font-poppins text-gray-700 mb-3">Price</h4>
         <div className="space-y-3">
           <div className="relative h-2">
             <div className="absolute w-full h-2 bg-gray-200 rounded-lg"></div>
@@ -117,7 +138,9 @@ export const FilterSidebar = ({ isOpen = true, onClose }) => {
       </div>
 
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Rating</h4>
+        <h4 className="font-semibold text-gray-700 mb-3 font-poppins">
+          Rating
+        </h4>
         <div className="space-y-2">
           {mockRatings.map(({ id, value }) => (
             <label

@@ -27,6 +27,7 @@ module.exports = {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
         poppins: ["var(--font-poppins)"],
         quicksand: ["var(--font-quicksand)"],
+        inter: ["var(--font-inter)"],
       },
     },
   },
