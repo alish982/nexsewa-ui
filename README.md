@@ -23,3 +23,10 @@ yarn dev
 
 3. **Open your browser**
 Navigate to [http://localhost:3000](http://localhost:3000)
+
+4. **GitHub Project Link**
+https://github.com/alish982/nexsewa-ui
+
+
+5. **Project Link**
+https://nexsewa-ui.vercel.app/

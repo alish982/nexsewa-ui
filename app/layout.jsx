@@ -1,6 +1,6 @@
 import "./globals.css";
-import { Header } from "@/components/sections/Header";
-import { Footer } from "@/components/sections/Footer";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { Poppins, Quicksand, Inter } from "next/font/google";
 
 export const metadata = {
