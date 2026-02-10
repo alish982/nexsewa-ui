@@ -35,27 +35,17 @@ export const banners = [
   {
     id: '1',
     title: 'Fresh Vegetables',
-    subtitle: 'Big discount',
-    description: 'Save up to 50% on fresh produce',
     image: '/banner/bannerI.svg',
-    discount: '50% OFF',
-    cta: { text: 'Shop Now', link: '/category/vegetables' }
   },
   {
     id: '2',
     title: 'Organic Products',
-    subtitle: 'Natural & Healthy',
-    description: '100% organic certified products',
     image: '/banner/bannerII.svg',
-    cta: { text: 'Explore', link: '/category/organic' }
   },
     {
     id: '3',
     title: ' Products',
-    subtitle: 'Healthy',
-    description: '100% organic certified products',
     image: '/banner/bannerIII.svg',
-    cta: { text: 'plre', link: '/category/sale' }
   },
 ];
 
@@ -266,4 +256,13 @@ export const mockRatings = [
       question: "Can other person order order for me?",
       answer: "",
     },
+  ];
+  
+export const storeHours = [
+    { id: 1, day: "Monday", hours: "8:00 AM - 12:00 PM" },
+    { id: 2, day: "Tuesday", hours: "8:00 AM - 10:00 PM" },
+    { id: 3, day: "Wednesday", hours: "8:00 AM - 10:00 PM" },
+    { id: 4, day: "Thursday", hours: "8:00 AM - 10:00 PM" },
+    { id: 5, day: "Friday", hours: "8:00 AM - 10:00 PM" },
+    { id: 6, day: "Saturday", hours: "9:00 AM - 3:00 PM" },
   ];

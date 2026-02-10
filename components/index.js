@@ -1,17 +1,17 @@
-// commons
-export { Badge } from './commons/Badge';
-export { Icon } from './commons/Icon';
-export { Input } from './commons/Input';
+// COMMONS
+export * from './commons/Badge';
+export * from './commons/Icon';
+export * from './commons/Input';
+export * from './commons/SearchBar';
 
-// listing
-export { ProductCard } from './listing/ProductCard';
-export { CategoryCard } from './listing/CategoryCard';
-export { SearchBar } from './commons/SearchBar';
+// LISTING 
+export * from './listing/ProductCard';
+export * from './listing/CategoryCard';
 
-// sections
-export { Header } from './sections/Header';
-export { Footer } from './sections/Footer';
-export { ProductGrid } from './sections/ProductGrid';
-export { CategoryList } from './sections/CategoryList';
-export { HeroSlider } from './sections/HeroSlider';
-export { FilterSidebar } from './sections/FilterSidebar';
+// SECTIONS 
+export * from './sections/Header';
+export * from './sections/Footer';
+export * from './sections/ProductGrid';
+export * from './sections/CategoryList';
+export * from './sections/HeroSlider';
+export * from './sections/FilterSidebar';

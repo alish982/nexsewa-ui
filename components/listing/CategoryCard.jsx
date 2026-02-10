@@ -15,10 +15,10 @@ export const CategoryCard = ({ category }) => {
       "
     >
       <div className="flex flex-col items-center text-center gap-3">
-        <h3 className="font-semibold text-gray-800">{category.name}</h3>
+        <h3 className="font-inter font-[500] text-gray-800">{category.name}</h3>
 
         {category.itemCount !== undefined && (
-          <p className="text-sm text-gray-500">{category.itemCount} items</p>
+          <p className="font-inter font-[400] text-gray-500">{category.itemCount} items</p>
         )}
         <div className="relative w-full h-[140px]">
           <Image

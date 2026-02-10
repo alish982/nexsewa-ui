@@ -142,7 +142,7 @@ export const Footer = () => {
 const FooterColumn = ({ title, links }) => {
   return (
     <div>
-      <h4 className="text-lg font-semibold text-gray-900 mb-4">{title}</h4>
+      <h4 className="text-lg font-inter font-semibold text-gray-900 mb-4">{title}</h4>
 
       <ul className="space-y-2">
         {links.map((link, i) => (

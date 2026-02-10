@@ -75,7 +75,14 @@ export const ProductGridEnd = ({ products }) => {
     </div>
   );
 };
+
 ProductGrid.propTypes = {
+  products: PropTypes.array.isRequired,
+};
+ProductGridFeatured.propTypes = {
+  products: PropTypes.array.isRequired,
+};
+ProductGridEnd.propTypes = {
   products: PropTypes.array.isRequired,
 };
 4

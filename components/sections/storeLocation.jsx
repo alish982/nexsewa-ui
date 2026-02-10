@@ -1,29 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-import { MapPin, Phone, Clock, ChevronDown, ChevronUp } from "lucide-react";
+import {Clock } from "lucide-react";
 import Image from "next/image";
+import { storeHours } from "@/data/mockData";
 
-// Store Location Component
+
 export const StoreLocation = () => {
-  const storeHours = [
-    { id: 1, day: "Monday", hours: "8:00 AM - 12:00 PM" },
-    { id: 2, day: "Tuesday", hours: "8:00 AM - 10:00 PM" },
-    { id: 3, day: "Wednesday", hours: "8:00 AM - 10:00 PM" },
-    { id: 4, day: "Thursday", hours: "8:00 AM - 10:00 PM" },
-    { id: 5, day: "Friday", hours: "8:00 AM - 10:00 PM" },
-    { id: 6, day: "Saturday", hours: "9:00 AM - 3:00 PM" },
-  ];
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Store Location</h2>
+      <h2 className="text-2xl font-quicksand font-bold text-gray-800">
+        Store Location
+      </h2>
       <div className="grid lg:grid-cols-2 gap-6">
-        {/* Left Side - Store Info */}
-        <div className="bg-white rounded-xl  p-6">
-          {/* Address */}
+        <div className="bg-white rounded-xl p-3">
           <div className="flex gap-3 mb-4">
-            <MapPin className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+            <Image src={"/others/location.svg"} height={20} width={20} />
             <div>
               <p className="text-gray-500">Location</p>
               <p className="text-gray-700 text-sm">
@@ -32,15 +24,15 @@ export const StoreLocation = () => {
             </div>
           </div>
           <div className="flex gap-3 mb-4">
-            <Clock className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+            <Clock className="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-gray-500">Store Opening Time</p>
               <p className="text-gray-700 text-sm">10:00 PM - 6:00 PM</p>
             </div>
           </div>
 
-          <div className="flex gap-3 mb-6">
-            <Clock className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+          <div className="flex items-start gap-3 mb-6">
+            <Image src={"/others/delivery.svg"} height={20} width={20} />
             <div>
               <p className="text-gray-600">Delivery Available</p>
               {storeHours.map((schedule) => (
@@ -65,9 +57,15 @@ export const StoreLocation = () => {
               ))}
             </div>
           </div>
-
-          <button className="w-full text-left bg-gray-200 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors px-4 mb-4">
-            500 + Items sold
+          <button className="w-full flex items-center gap-2 text-left bg-[#F3F4F6] hover:bg-gray-200 text-gray-800 font-[600] font-quicksand py-3 px-4 rounded-lg transition-colors mb-4">
+            <Image
+              src="/others/box.svg"
+              height={20}
+              width={20}
+              className="flex-shrink-0"
+              alt="box"
+            />
+            <span>500 + Items sold</span>
           </button>
 
           <button className="w-full bg-custom hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors">
@@ -87,95 +85,6 @@ export const StoreLocation = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// FAQ Component
-export const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(1);
-
-  const faqs = [
-    {
-      id: 1,
-      question: "How can I place a purchase?",
-      answer: "",
-    },
-    {
-      id: 2,
-      question: "How can I make a payment?",
-      answer:
-        "You can place an order by visiting our website or mobile app. Simply compare products, add them to your cart, and complete the purchase process. Once verified, your order is ready! Delivery will be scheduled according to your preferred time slot.",
-    },
-    {
-      id: 3,
-      question: "Does Farmizen charge any fees/taxes/other charges?",
-      answer: "",
-    },
-    {
-      id: 4,
-      question: "How long does it take to get my order delivered?",
-      answer: "",
-    },
-    {
-      id: 5,
-      question: "Can other person order order for me?",
-      answer: "",
-    },
-  ];
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  return (
-    <div className="grid lg:grid-cols-2 gap-8 items-start">
-      {/* Left Side - Image */}
-      <div className="relative">
-        <Image
-          src="/shopping-cart-illustration.png"
-          alt="Shopping Cart"
-          width={500}
-          height={500}
-          className="w-full max-w-md mx-auto"
-        />
-      </div>
-
-      {/* Right Side - FAQ */}
-      <div>
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={faq.id}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
-              >
-                <span className="font-medium text-gray-800">
-                  {faq.question}
-                </span>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                )}
-              </button>
-
-              {openIndex === index && faq.answer && (
-                <div className="px-4 pb-4 text-gray-600 text-sm leading-relaxed">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
         </div>
       </div>
     </div>

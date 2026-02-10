@@ -5,20 +5,15 @@ import PropTypes from "prop-types";
 import { Search } from "lucide-react";
 import { Input } from "./Input";
 
-export const SearchBar = ({ placeholder, onSearch, show, rounded}) => {
+export const SearchBar = ({ placeholder, show, rounded}) => {
   const [query, setQuery] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch && onSearch(query);
-  };
 
   return (
     <form
-      onSubmit={handleSubmit}
       className="relative flex-1 font-poppins max-w-2xl"
     >
       <Input
+        style={{ borderRadius: show ? "" : "500px" }}
         type="text"
         placeholder={show ? placeholder : "search for product"}
         value={query}
@@ -40,7 +35,6 @@ export const SearchBar = ({ placeholder, onSearch, show, rounded}) => {
 
 SearchBar.propTypes = {
   placeholder: PropTypes.string,
-  onSearch: PropTypes.func,
   rounded: PropTypes.string,
   show: PropTypes.bool
 };

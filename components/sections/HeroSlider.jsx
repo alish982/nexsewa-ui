@@ -9,18 +9,18 @@ export const HeroSlider = ({ banners }) => {
 
   return (
     <div>
-      <div className="flex">
+      <div className="flex items-center">
         <Image
           src={"/logo/store.svg"}
           height={76}
           width={76}
           alt="store image"
         />
-        <span className="pt-5 px-2 text-2xl">Rice Spice Dice</span>
+        <span className="px-2 font-quicksand font-[700]">Rice Spice Dice</span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:h-[520px]">
         <Link
-          href={banners[0]?.cta?.link || "#"}
+          href={"#"}
           className="relative lg:col-span-7 rounded-2xl overflow-hidden block h-[300px] lg:h-auto"
         >
           <Image
@@ -37,7 +37,7 @@ export const HeroSlider = ({ banners }) => {
           {[banners[1], banners[2]].map((banner) => (
             <Link
               key={banner.id}
-              href={banner?.cta?.link || "#"}
+              href={"#"}
               className="relative rounded-2xl overflow-hidden block h-[200px] lg:h-auto"
             >
               <Image
